@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">E-commerce Android Application</string>
+    <string name="e_commerce">E-Commerce</string>
+    <string name="version">version</string>
 </resources>
