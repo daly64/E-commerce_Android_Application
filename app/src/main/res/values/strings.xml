@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">E-commerce Android Application</string>
+    <string name="app_name">E-commerce Android App</string>
     <string name="e_commerce">E-Commerce</string>
     <string name="version">version</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -8,4 +8,6 @@
     <string name="category">Category</string>
     <string name="help">Help</string>
     <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="caddy">Caddy</string>
 </resources>

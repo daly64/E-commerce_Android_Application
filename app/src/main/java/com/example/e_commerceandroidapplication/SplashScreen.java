@@ -5,13 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
@@ -31,18 +29,27 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_splash_screen);
         tvVersion = findViewById(R.id.version);
-        tvVersion.setText(getString(R.string.version)+" "+getVersion(this));
+        tvVersion.setText(getString(R.string.version) + " " + getVersion(this));
 
         // durée d'affichage du splash screen 3 seconde
-        int SPLASH_DISPLAY_LENGTH = 3000;
+        settingUp_waiting(3);
 
-        // après un délaie de x secondes ferme le splash screen et affiche la main activity
-        new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashScreen.this,MainActivity.class);
-            SplashScreen.this.startActivity(intent);
-            SplashScreen.this.finish();
+
+    }
+
+    // après un délaie de x secondes ferme le splash screen et affiche la main activity
+    private void settingUp_waiting(int seconds) {
+        int SPLASH_DISPLAY_LENGTH = seconds * 1000;
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                SplashScreen.this.startActivity(intent);
+                SplashScreen.this.finish();
+
+            }
         }, SPLASH_DISPLAY_LENGTH);
-
     }
 
     // mode plein ecran

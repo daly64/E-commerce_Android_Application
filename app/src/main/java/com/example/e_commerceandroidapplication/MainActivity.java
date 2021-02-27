@@ -1,21 +1,22 @@
 package com.example.e_commerceandroidapplication;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.e_commerceandroidapplication.adapters.PagerAdapter;
-import com.example.e_commerceandroidapplication.fragments.CategoryFragment;
-import com.example.e_commerceandroidapplication.fragments.HelpFragment;
-import com.example.e_commerceandroidapplication.fragments.ProfileFragment;
-import com.example.e_commerceandroidapplication.fragments.RecentFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     ViewPager VpList;
     BottomNavigationView BnvBar;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +25,43 @@ public class MainActivity extends AppCompatActivity {
         VpList = findViewById(R.id.pager);
         BnvBar = findViewById(R.id.bottomNavBar);
 
-        settingUp_ViewPager();
-        link_NavBar_to_ViewPager();
-        link_ViewPager_to_NavBar();
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        settingUp_ViewPager();
+        link_ViewPager_and_NavBar();
 
     }
 
-    private void settingUp_ViewPager(){
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tool_bar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_caddy) {
+            Toast.makeText(MainActivity.this, "Action caddy clicked", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.action_search) {
+            Toast.makeText(MainActivity.this, "Action search clicked", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void settingUp_ViewPager() {
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 0);
         VpList.setAdapter(pagerAdapter);
         VpList.setCurrentItem(0);
     }
-    private void link_NavBar_to_ViewPager(){
+
+    private void link_ViewPager_and_NavBar() {
+
         BnvBar.setOnNavigationItemSelectedListener(
                 item -> {
                     switch (item.getItemId()) {
@@ -56,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
                     return false;
                 });
 
-    }
-    private void link_ViewPager_to_NavBar(){
         VpList.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
