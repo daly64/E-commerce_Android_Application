@@ -5,6 +5,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.e_commerceandroidapplication.fragments.CategoryFragment;
+import com.example.e_commerceandroidapplication.fragments.HelpFragment;
+import com.example.e_commerceandroidapplication.fragments.ProfileFragment;
+import com.example.e_commerceandroidapplication.fragments.RecentFragment;
+
 import java.util.ArrayList;
 
 public class PagerAdapter extends FragmentPagerAdapter {
@@ -15,6 +20,10 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public PagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
         this.fragments = new ArrayList<>();
+        fragments.add(new RecentFragment());
+        fragments.add(new CategoryFragment());
+        fragments.add(new HelpFragment());
+        fragments.add(new ProfileFragment());
     }
 
     @NonNull
