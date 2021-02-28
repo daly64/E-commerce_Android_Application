@@ -13,10 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/e_commerce"
+        android:fontFamily="@font/core_sans_e_bold"
         android:textColor="@color/white"
         android:textSize="50sp"
         android:layout_margin="25dp"
-        android:textStyle="bold" />
+        />
     <ImageView
         android:layout_width="250dp"
         android:layout_height="125dp"
@@ -26,6 +27,7 @@
         android:id="@+id/version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/core_sans_e_regular"
         android:text="@string/version"
         android:textColor="@color/white"
         android:textSize="35sp"

@@ -13,7 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/main</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Toolbar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+
+    <style name="Toolbar.TitleText" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/core_sans_e_regular</item>
     </style>
+
 </resources>

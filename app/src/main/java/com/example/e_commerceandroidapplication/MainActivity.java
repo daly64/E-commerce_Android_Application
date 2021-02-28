@@ -25,12 +25,16 @@ public class MainActivity extends AppCompatActivity {
         VpList = findViewById(R.id.pager);
         BnvBar = findViewById(R.id.bottomNavBar);
 
+        setting_up_toolbar();
+        setting_up_viewpager();
+        link_viewpager_and_navbar();
+
+
+    }
+
+    private void setting_up_toolbar() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        settingUp_ViewPager();
-        link_ViewPager_and_NavBar();
-
     }
 
     @Override
@@ -44,23 +48,23 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_caddy) {
-            Toast.makeText(MainActivity.this, "Action caddy clicked", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Action caddy clicked", Toast.LENGTH_SHORT).show();
             return true;
         }
         if (id == R.id.action_search) {
-            Toast.makeText(MainActivity.this, "Action search clicked", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Action search clicked", Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void settingUp_ViewPager() {
+    private void setting_up_viewpager() {
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 0);
         VpList.setAdapter(pagerAdapter);
         VpList.setCurrentItem(0);
     }
 
-    private void link_ViewPager_and_NavBar() {
+    private void link_viewpager_and_navbar() {
 
         BnvBar.setOnNavigationItemSelectedListener(
                 item -> {
