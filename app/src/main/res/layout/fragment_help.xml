@@ -11,6 +11,6 @@
         android:layout_gravity="center"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:text="Help Fragment" />
+        android:text="@string/help_fragment" />
 
 </FrameLayout>

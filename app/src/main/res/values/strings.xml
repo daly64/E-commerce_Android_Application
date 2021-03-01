@@ -9,8 +9,16 @@
     <string name="help">Help</string>
     <string name="profile">Profile</string>
     <string name="search">Search</string>
-    <string name="caddy">Caddy</string>
+    <string name="cart">Cart</string>
     <string name="recent_fragment">Recent Fragment</string>
-    <string name="product_name">product name</string>
     <string name="_100_usd">100 USD</string>
+    <string name="category_fragment">Category Fragment</string>
+    <string name="help_fragment">Help Fragment</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="product_name">product name</string>
+    <string name="product_image">product image</string>
+    <string name="product_price">899 USD</string>
+    <string name="product_quantity">5 item(s)</string>
+    <string name="product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut leo at velit efficitur pharetra. Donec eget convallis purus. Donec sed elit pharetra, condimentum elit in, tincidunt ante. Praesent vehicula sodales purus non pellentesque. In tincidunt rutrum tellus et porttitor. Vivamus velit eros, dignissim ut porttitor ut, tristique eu purus. Curabitur dignissim tincidunt metus. Nulla rhoncus nibh non enim rutrum faucibus. Maecenas lectus dolor, elementum nec neque consectetur, tempor feugiat ex. Pellentesque eget varius orci. Nunc tempor, sem in pretium accumsan, nisi metus varius justo, vel egestas mi neque id arcu. Ut ut rutrum lorem, in interdum odio.</string>
 </resources>

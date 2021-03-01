@@ -11,6 +11,6 @@
         android:layout_gravity="center"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:text="Profile Fragment" />
+        android:text="@string/profile_fragment" />
 
 </FrameLayout>

@@ -11,10 +11,11 @@ import com.example.e_commerceandroidapplication.fragments.ProfileFragment;
 import com.example.e_commerceandroidapplication.fragments.RecentFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<Fragment> fragments;
+    private List<Fragment> fragments;
 
 
     public PagerAdapter(@NonNull FragmentManager fm, int behavior) {

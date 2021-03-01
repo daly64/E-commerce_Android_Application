@@ -14,27 +14,27 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewPager VpList;
-    BottomNavigationView BnvBar;
-    Toolbar toolbar;
+    ViewPager pager;
+    BottomNavigationView navigation_bar;
+    Toolbar tool_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        VpList = findViewById(R.id.pager);
-        BnvBar = findViewById(R.id.bottomNavBar);
+        pager = findViewById(R.id.pager);
+        navigation_bar = findViewById(R.id.navigation_bar);
 
-        setting_up_toolbar();
-        setting_up_viewpager();
-        link_viewpager_and_navbar();
+        settingUpToolbar();
+        settingUpViewPager();
+        linkViewpagerAndNavbar();
 
 
     }
 
-    private void setting_up_toolbar() {
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    private void settingUpToolbar() {
+        tool_bar = findViewById(R.id.tool_bar);
+        setSupportActionBar(tool_bar);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_caddy) {
+        if (id == R.id.action_cart) {
             Toast.makeText(MainActivity.this, "Action caddy clicked", Toast.LENGTH_SHORT).show();
             return true;
         }
@@ -58,34 +58,34 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void setting_up_viewpager() {
-        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 0);
-        VpList.setAdapter(pagerAdapter);
-        VpList.setCurrentItem(0);
+    private void settingUpViewPager() {
+        PagerAdapter pager_adapter = new PagerAdapter(getSupportFragmentManager(), 0);
+        pager.setAdapter(pager_adapter);
+        pager.setCurrentItem(0);
     }
 
-    private void link_viewpager_and_navbar() {
+    private void linkViewpagerAndNavbar() {
 
-        BnvBar.setOnNavigationItemSelectedListener(
+        navigation_bar.setOnNavigationItemSelectedListener(
                 item -> {
                     switch (item.getItemId()) {
                         case R.id.page_0:
-                            VpList.setCurrentItem(0);
+                            pager.setCurrentItem(0);
                             break;
                         case R.id.page_1:
-                            VpList.setCurrentItem(1);
+                            pager.setCurrentItem(1);
                             break;
                         case R.id.page_2:
-                            VpList.setCurrentItem(2);
+                            pager.setCurrentItem(2);
                             break;
                         case R.id.page_3:
-                            VpList.setCurrentItem(3);
+                            pager.setCurrentItem(3);
                             break;
                     }
                     return false;
                 });
 
-        VpList.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 //Faites glisser vers une page pour sélectionner la barre de navigation inférieure
-                BnvBar.getMenu().getItem(position).setChecked(true);
+                navigation_bar.getMenu().getItem(position).setChecked(true);
             }
 
             @Override

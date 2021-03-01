@@ -14,11 +14,12 @@ import com.example.e_commerceandroidapplication.adapters.ProductsAdapter;
 import com.example.e_commerceandroidapplication.models.Product;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecentFragment extends Fragment {
     ProductsAdapter adapter;
-    RecyclerView RVList;
-    private ArrayList<Product> products = new ArrayList<>();
+    RecyclerView products_list;
+    List<Product> products = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,25 +27,25 @@ public class RecentFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_recent, container, false);
 
-        setting_up_recyclerView(view);
+        settingUpRecyclerView(view);
         return view;
     }
 
-    private void setting_up_recyclerView(View view) {
-        products.add(new Product("Samsung Galaxy S10 -Black", "p1", "description", 0, 899));
-        products.add(new Product("U17 USB Portable M3 HUmidifier", "p2", "description", 0, 20));
-        products.add(new Product("Apple Watch Series 3", "p3", "description", 0, 1200));
-        products.add(new Product("Mini Digital Speaker", "p4", "description", 0, 100));
-        products.add(new Product("Hybride Stroller Cabi", "p5", "description", 0, 380));
-        products.add(new Product("Bib Slabber", "p6", "description", 0, 8));
-        products.add(new Product("Portable Bottle Heater", "p7", "description", 0, 8));
-        products.add(new Product("GEA Baby Ray Queen", "p8", "description", 0, 220));
+    private void settingUpRecyclerView(View view) {
+        products.add(new Product("Samsung Galaxy S10 -Black", "p1", getString(R.string.product_description), 0, 899));
+        products.add(new Product("U17 USB Portable M3 HUmidifier", "p2", getString(R.string.product_description), 0, 20));
+        products.add(new Product("Apple Watch Series 3", "p3", getString(R.string.product_description), 0, 1200));
+        products.add(new Product("Mini Digital Speaker", "p4", getString(R.string.product_description), 0, 100));
+        products.add(new Product("Hybride Stroller Cabi", "p5", getString(R.string.product_description), 0, 380));
+        products.add(new Product("Bib Slabber", "p6", getString(R.string.product_description), 0, 8));
+        products.add(new Product("Portable Bottle Heater", "p7", getString(R.string.product_description), 0, 8));
+        products.add(new Product("GEA Baby Ray Queen", "p8", getString(R.string.product_description), 0, 220));
 
-        RVList = view.findViewById(R.id.list);
-        RVList.setHasFixedSize(true);
+        products_list = view.findViewById(R.id.products_list);
+        products_list.setHasFixedSize(true);
         GridLayoutManager manager = new GridLayoutManager(getContext(), 2);
-        RVList.setLayoutManager(manager);
+        products_list.setLayoutManager(manager);
         adapter = new ProductsAdapter(view.getContext(), products);
-        RVList.setAdapter(adapter);
+        products_list.setAdapter(adapter);
     }
 }

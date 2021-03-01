@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Category Fragment"
+        android:text="@string/category_fragment"
         android:textSize="30sp"
         android:textStyle="bold" />
 
