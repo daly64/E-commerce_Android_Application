@@ -32,14 +32,14 @@ public class RecentFragment extends Fragment {
     }
 
     private void settingUpRecyclerView(View view) {
-        products.add(new Product("Samsung Galaxy S10 -Black", "p1", getString(R.string.product_description), 0, 899));
-        products.add(new Product("U17 USB Portable M3 HUmidifier", "p2", getString(R.string.product_description), 0, 20));
-        products.add(new Product("Apple Watch Series 3", "p3", getString(R.string.product_description), 0, 1200));
-        products.add(new Product("Mini Digital Speaker", "p4", getString(R.string.product_description), 0, 100));
-        products.add(new Product("Hybride Stroller Cabi", "p5", getString(R.string.product_description), 0, 380));
-        products.add(new Product("Bib Slabber", "p6", getString(R.string.product_description), 0, 8));
-        products.add(new Product("Portable Bottle Heater", "p7", getString(R.string.product_description), 0, 8));
-        products.add(new Product("GEA Baby Ray Queen", "p8", getString(R.string.product_description), 0, 220));
+        products.add(new Product("Samsung Galaxy S10 -Black", "p1", getString(R.string.product_description), "all", 0, 899));
+        products.add(new Product("U17 USB Portable M3 HUmidifier", "p2", getString(R.string.product_description), "all", 0, 20));
+        products.add(new Product("Apple Watch Series 3", "p3", getString(R.string.product_description), "all", 0, 1200));
+        products.add(new Product("Mini Digital Speaker", "p4", getString(R.string.product_description), "all", 0, 100));
+        products.add(new Product("Hybride Stroller Cabi", "p5", getString(R.string.product_description), "all", 0, 380));
+        products.add(new Product("Bib Slabber", "p6", getString(R.string.product_description), "all", 0, 8));
+        products.add(new Product("Portable Bottle Heater", "p7", getString(R.string.product_description), "all", 0, 8));
+        products.add(new Product("GEA Baby Ray Queen", "p8", getString(R.string.product_description), "all", 0, 220));
 
         products_list = view.findViewById(R.id.products_list);
         products_list.setHasFixedSize(true);

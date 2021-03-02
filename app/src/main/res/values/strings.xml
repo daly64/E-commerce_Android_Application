@@ -21,4 +21,7 @@
     <string name="product_price">899 USD</string>
     <string name="product_quantity">5 item(s)</string>
     <string name="product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut leo at velit efficitur pharetra. Donec eget convallis purus. Donec sed elit pharetra, condimentum elit in, tincidunt ante. Praesent vehicula sodales purus non pellentesque. In tincidunt rutrum tellus et porttitor. Vivamus velit eros, dignissim ut porttitor ut, tristique eu purus. Curabitur dignissim tincidunt metus. Nulla rhoncus nibh non enim rutrum faucibus. Maecenas lectus dolor, elementum nec neque consectetur, tempor feugiat ex. Pellentesque eget varius orci. Nunc tempor, sem in pretium accumsan, nisi metus varius justo, vel egestas mi neque id arcu. Ut ut rutrum lorem, in interdum odio.</string>
+    <string name="category_image">Category image</string>
+    <string name="category_name">category name</string>
+    <string name="category_items_number">item(s)</string>
 </resources>

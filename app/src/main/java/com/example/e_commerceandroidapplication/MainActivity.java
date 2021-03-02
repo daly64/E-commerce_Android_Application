@@ -1,5 +1,6 @@
 package com.example.e_commerceandroidapplication;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -64,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         pager.setCurrentItem(0);
     }
 
+    private void setToolBarTitle(int resource) {
+        getSupportActionBar().setTitle(getString(resource));
+    }
+
+    @SuppressLint("NonConstantResourceId")
     private void linkViewpagerAndNavbar() {
 
         navigation_bar.setOnNavigationItemSelectedListener(
@@ -71,15 +77,19 @@ public class MainActivity extends AppCompatActivity {
                     switch (item.getItemId()) {
                         case R.id.page_0:
                             pager.setCurrentItem(0);
+                            setToolBarTitle(R.string.app_name);
                             break;
                         case R.id.page_1:
                             pager.setCurrentItem(1);
+                            setToolBarTitle(R.string.category);
                             break;
                         case R.id.page_2:
                             pager.setCurrentItem(2);
+                            setToolBarTitle(R.string.help);
                             break;
                         case R.id.page_3:
                             pager.setCurrentItem(3);
+                            setToolBarTitle(R.string.profile);
                             break;
                     }
                     return false;
@@ -95,6 +105,22 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 //Faites glisser vers une page pour sélectionner la barre de navigation inférieure
                 navigation_bar.getMenu().getItem(position).setChecked(true);
+
+                switch (position) {
+                    case 0:
+                        setToolBarTitle(R.string.app_name);
+                        break;
+                    case 1:
+                        setToolBarTitle(R.string.category);
+                        break;
+                    case 2:
+                        setToolBarTitle(R.string.help);
+                        break;
+                    case 3:
+                        setToolBarTitle(R.string.profile);
+                        break;
+                }
+
             }
 
             @Override
