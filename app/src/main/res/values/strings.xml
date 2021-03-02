@@ -24,4 +24,5 @@
     <string name="category_image">Category image</string>
     <string name="category_name">category name</string>
     <string name="category_items_number">item(s)</string>
+    <string name="help_text">help text</string>
 </resources>

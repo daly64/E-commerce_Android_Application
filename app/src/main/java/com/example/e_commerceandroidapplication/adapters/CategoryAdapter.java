@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.e_commerceandroidapplication.R;
@@ -86,6 +87,7 @@ public class CategoryAdapter extends BaseAdapter {
                 break;
         }
 
+        view.setOnClickListener(v -> Toast.makeText(context, category.name, Toast.LENGTH_SHORT).show());
         return view;
     }
 

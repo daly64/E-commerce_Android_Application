@@ -5,12 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HelpFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:text="@string/help_fragment" />
-
+    <ListView
+        android:id="@+id/help_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </FrameLayout>
