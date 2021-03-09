@@ -30,4 +30,6 @@
     <string name="mobile">+628 12345689</string>
     <string name="address">Envato HQ : 12 King Street, melbourne Victoria 300 Australia</string>
     <string name="edit">EDIT</string>
+    <string name="profil_help_image">profil help image</string>
+    <string name="order_history">Order History</string>
 </resources>

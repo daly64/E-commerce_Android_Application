@@ -5,8 +5,8 @@
 
     <ImageView
         android:id="@+id/category_image"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:contentDescription="@string/category_image"
         android:padding="10dp"
         android:scaleType="fitXY"

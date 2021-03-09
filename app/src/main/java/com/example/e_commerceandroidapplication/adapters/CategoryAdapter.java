@@ -58,34 +58,17 @@ public class CategoryAdapter extends BaseAdapter {
         category_name.setText(category.name);
         category_items_number.setText(category.items_number.toString() + " " + context.getString(R.string.category_items_number));
 
-        switch (category.image) {
-            case "a1":
-                category_image.setImageResource(R.drawable.a1);
-                break;
-            case "a2":
-                category_image.setImageResource(R.drawable.a2);
-                break;
-            case "a3":
-                category_image.setImageResource(R.drawable.a3);
-                break;
-            case "a4":
-                category_image.setImageResource(R.drawable.a4);
-                break;
-            case "a5":
-                category_image.setImageResource(R.drawable.a5);
-                break;
-            case "a6":
-                category_image.setImageResource(R.drawable.a6);
-                break;
+        int id = context.getResources().getIdentifier(category.image, "drawable", context.getPackageName());
+        category_image.setImageResource(id);
 
-            default:
-                String uri = category.image; // or whatever you want
-                Glide.with(context)
-                        .load(uri)
-                        .placeholder(R.drawable.placeholder)
-                        .into(category_image);
-                break;
+        if (!category.image.contains("a")) {
+            String uri = category.image; // or whatever you want
+            Glide.with(context)
+                    .load(uri)
+                    .placeholder(R.drawable.placeholder)
+                    .into(category_image);
         }
+
 
         view.setOnClickListener(v -> Toast.makeText(context, category.name, Toast.LENGTH_SHORT).show());
         return view;
