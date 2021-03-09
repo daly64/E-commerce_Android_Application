@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".fragments.ProfileFragment">
 
+
     <TextView
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:text="@string/profile_fragment" />
+        android:layout_margin="10dp"
+        android:text="@string/user_name_string"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/user_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_margin="5dp"
+        android:text="@string/mail" />
+
+    <TextView
+        android:id="@+id/user_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_mail"
+        android:layout_margin="5dp"
+        android:text="@string/mobile" />
+
+    <TextView
+        android:id="@+id/user_address"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_mobile"
+        android:layout_margin="5dp"
+        android:lines="2"
+        android:text="@string/address" />
+
+    <Button
+        android:id="@+id/edit_user"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/edit"
+        android:textSize="15sp" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/user_address"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+</RelativeLayout>

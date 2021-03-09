@@ -23,7 +23,8 @@
         android:layout_height="125dp"
         android:src="@drawable/ic_carte"
         android:layout_margin="25dp"
-        android:contentDescription="@string/cart" />
+        android:contentDescription="@string/cart"
+        app:tint="@color/white" />
     <TextView
         android:id="@+id/version"
         android:layout_width="wrap_content"
